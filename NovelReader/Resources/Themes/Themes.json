@@ -87,7 +87,7 @@
                 "backgroundColor": "halfBlack"
             }
 		},
-        "NRSectionHeaderView": {
+        "SectionHeaderView": {
             "default": {
                 "backgroundColor": "appWhite"
             }
@@ -101,12 +101,12 @@
                 "backgroundViewTheme": "default"
             }
         },
-		"NRSegmentCollectionHeaderView": {
+		"SegmentCollectionHeaderView": {
 			"default": {
 				"backgroundColor": "navBarRed"
 			}
 		},
-        "NRSearchBarHeaderView": {
+        "SearchBarHeaderView": {
             "default": {
                 "backgroundColor": "navBarRed"
             }

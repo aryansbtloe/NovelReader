@@ -39,7 +39,7 @@ class NovelCollectionViewController: UIViewController, CollectionViewControllerP
 
         // Collection Header: Segment Control
         collectionView.register(
-            NRSegmentCollectionHeaderView.self,
+            SegmentCollectionHeaderView.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: "headerCell"
         )
@@ -81,7 +81,7 @@ extension NovelCollectionViewController: UICollectionViewDelegateFlowLayout, UIC
             for: indexPath
         )
 
-        if let headerView = headerView as? NRSegmentCollectionHeaderView {
+        if let headerView = headerView as? SegmentCollectionHeaderView {
             headerView.segmentedControl?.handler = { [unowned self] _ in
                 if let segment = headerView.segmentedControl {
                     self.updateNovelSegment(segmentControl: segment)

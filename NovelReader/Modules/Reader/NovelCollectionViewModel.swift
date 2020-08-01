@@ -69,24 +69,18 @@ enum NovelCollectionType: Int {
     var cellIdentifier: String {
         switch self {
         case .recentNovel:
-            return kRecentNovelCellIdentifier
+            return RecentNovelCollectionViewCell.defaultReuseIdentifier
         case .topNovel:
-            return kNovelCellIdentifier
+            return NovelCollectionViewCell.defaultReuseIdentifier
         }
     }
 
     func registerCell(_ collectionView: UICollectionView) {
         switch self {
         case .recentNovel:
-            collectionView.register(
-                RecentNovelCollectionViewCell.nib,
-                forCellWithReuseIdentifier: self.cellIdentifier
-            )
+            RecentNovelCollectionViewCell.registerNib(for: collectionView)
         case .topNovel:
-            collectionView.register(
-                NRNovelCollectionViewCell.nib,
-                forCellWithReuseIdentifier: self.cellIdentifier
-            )
+            NovelCollectionViewCell.registerNib(for: collectionView)
         }
     }
 
@@ -95,7 +89,7 @@ enum NovelCollectionType: Int {
         case .recentNovel:
             return RecentNovelCollectionViewCell.fromNib() as? RecentNovelCollectionViewCell
         case .topNovel:
-            return NRNovelCollectionViewCell.fromNib() as? NRNovelCollectionViewCell
+            return NovelCollectionViewCell.fromNib() as? NovelCollectionViewCell
         }
     }
 }

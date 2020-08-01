@@ -1,5 +1,5 @@
 //
-//  NRSegmentCollectionHeaderView.swift
+//  SegmentCollectionHeaderView.swift
 //  NovelReader
 //
 //  Created by Praveen Prabhakar on 13/10/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NRSegmentCollectionHeaderView: UICollectionReusableView {
+class SegmentCollectionHeaderView: UICollectionReusableView {
     var segmentedControl: UISegmentedControl? = nil
 
     override init(frame: CGRect) {
